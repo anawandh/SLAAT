@@ -10,4 +10,4 @@ menu: main
 
 
 
-![](/images/Agile.jpg)
+![](../images/Agile.jpg)
