@@ -1,5 +1,5 @@
 ---
-title: Advanced Security Certbot, Cross-origing Security Advancements
+title: Advanced Security Certbot, Cross-Origin Security Advancements
 description: APCSP Lesson by Liav about improving the security of your site.
 date: 2023-03-24
 draft: false
@@ -15,7 +15,7 @@ draft: false
     - HTTPS redirection ensures that all traffic to the website is encrypted, preventing eavesdropping and tampering by third parties. 
     - Certificate renewal ensures that the website's security credentials remain up to date and valid, preventing browser warnings and other security issues.
 
-## Cross-origing Security advancemnts
+## Cross-Origin Security advancemnts
 - Cross-origin security is a set of techniques used to prevent web pages from accessing resources on other domains without permission. 
     - This is done to prevent malicious websites from stealing data or performing unauthorized actions on behalf of the user. 
     - Cross-origin security advancements include the use of the SameSite cookie attribute to prevent cross-site request forgery (CSRF) attacks, as well as the implementation of content security policies (CSP) to prevent cross-site scripting (XSS) attacks.
