@@ -13,7 +13,7 @@ To get started, you'll need to install Nginx on your server if it isn't already 
 
 Here's a sample configuration file that will proxy requests to a Flask application running on `localhost:5000`:
 
-````nginx
+```nginx
 server {
     listen 80;
     server_name myapp.com;
@@ -38,7 +38,7 @@ Finally, restart Nginx to apply the changes:
 
 ```bash
 sudo systemctl restart nginx
-````
+```
 
 ## Adding SSL with Certbot
 
