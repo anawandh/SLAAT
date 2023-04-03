@@ -60,3 +60,8 @@ app.config['UPLOAD_FOLDER'] = 'volumes/uploads/'  # location of user uploaded co
     - Host: host id can be found in the configuration tab of the instance
     - Port: port of the database
     - Database name: the database name
+
+This is what the instance once created will look like
+![image](https://user-images.githubusercontent.com/108041389/229413905-09da8795-6846-4c3c-8c2a-219924f1363b.png)
+- Upon clicking on the instance name you can find the configuration file.
+- ![image](https://user-images.githubusercontent.com/108041389/229414099-4a6e65fa-097a-42bc-bdfc-d043847b27b4.png)
