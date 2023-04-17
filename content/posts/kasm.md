@@ -10,6 +10,7 @@ KASM is a powerful virtual desktop which can allow you to create a virtual deskt
 ## What is KASM?
 KASM allows you to be able to host a virtual desktop which users can use. This allows us to be able to work on virtual containers which have things like browsers and VS Code, without having them on our devices. KASM provides a Virtual Desktop Interface and can be deployed with a DevOps approach.
 > Click here to go to the official [KASM site](https://www.kasmweb.com/).
+> [AWS Video on how to partition](https://www.youtube.com/watch?v=oHW0quS4pV4)
 
 ## What are benefits of KASM?
 KASM uses many familiar concepts and allow for a very powerful interface.
