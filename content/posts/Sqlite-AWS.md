@@ -14,54 +14,63 @@ description: ""
 
 ![image](https://user-images.githubusercontent.com/108041389/227831084-10ab2eb9-bb51-42c4-bdab-4620ba315898.png)
 
-### Change your init.py file to this --
-
-``` from flask import Flask
-from flask_login import LoginManager
-from flask_sqlalchemy import SQLAlchemy
-from flask_migrate import Migrate
-
-"""
-These object can be used throughout project.
-1.) Objects from this file can be included in many blueprints
-2.) Isolating these object definitions avoids duplication and circular dependencies
-"""
-
-# Setup of key Flask object (app)
-app = Flask(__name__)
-
-# Setup SQLAlchemy object and properties for the database (db)
-dbURI = 'postgresql+psycopg2://<postgres>:<nighthawk>@<test-database-adi.ctenoof0kzic.us-east-2.rds.amazonaws.com>:<5432>/<test-database-adi>'
-
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SQLALCHEMY_DATABASE_URI'] = dbURI
-app.config['SECRET_KEY'] = 'SECRET_KEY'
-db = SQLAlchemy(app)
-Migrate(app, db)
-
-# Images storage
-app.config['MAX_CONTENT_LENGTH'] = 5 * 1024 * 1024  # maximum size of uploaded content
-app.config['UPLOAD_EXTENSIONS'] = ['.jpg', '.png', '.gif']  # supported file types
-app.config['UPLOAD_FOLDER'] = 'volumes/uploads/'  # location of user uploaded content 
-```
+### RDS on AWS looks like this 
+![image](https://user-images.githubusercontent.com/108041389/229413905-09da8795-6846-4c3c-8c2a-219924f1363b.png)
+- The picture above shows an RDS instance that has been made. 
 
 ### To create a RDS database file 
 
 - First create a database in RDS service
     - Steps:
     > - go to dashboard of AWS, go to search bar and type RDS, click on the first thing that pops up
+    > - go to easy create, name the database whatever you want and choose PostgresSQL as your RDS engine. and then folllow instructions on this page [link](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_GettingStarted.CreatingConnecting.PostgreSQL.html)
     > - Create your own instance, make sure to remember the master password. use default security group and connect to an ec2 instance that you want the database in. 
-    > - Change your init.py file with this config -
-        dbURI = 'postgresql+psycopg2://<username>:<password>@<host>:<port>/<database_name>' 
-
-- here 
-    - Username: master username
-    - Password: master password
-    - Host: host id can be found in the configuration tab of the instance
-    - Port: port of the database
-    - Database name: the database name
 
 This is what the instance once created will look like
 ![image](https://user-images.githubusercontent.com/108041389/229413905-09da8795-6846-4c3c-8c2a-219924f1363b.png)
 - Upon clicking on the instance name you can find the configuration file.
 - ![image](https://user-images.githubusercontent.com/108041389/229414099-4a6e65fa-097a-42bc-bdfc-d043847b27b4.png)
+
+
+### Connecting to an EC2 
+in the same link as above - [link](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_GettingStarted.CreatingConnecting.PostgreSQL.html)
+we can find the instructions to make the ec2 instance and connecting it to the RDS instance that you created now we are ready to play around. 
+run the following code segments:
+``` 
+sudo yum update -y 
+
+```
+- this updates dependencies if needed
+```
+sudo amazon-linux-extras install postgresql14
+```
+- installs postgres engine to run postgres commands 
+> - note* for the ec2 that you will use for hacks, yu do not need to run this command as I have done them for you
+
+----
+### needed
+```
+psql --host=database-test1.ctenoof0kzic.us-east-2.rds.amazonaws.com --port=5432 --username=postgres
+```
+- Once you reach this step, if it asks for password - ask me!
+
+Now you have logged into the RDS as the creator who has all the rights
+
+## Postgres Commands
+- to see all the tables in the instance the command is - 
+```
+\l
+```
+
+- to create database -
+```
+CREATE DATABASE (type the database name you want- do not include the parenthesis)
+```
+
+- More commands here - [Command link](https://www.tutorialspoint.com/postgresql/postgresql_create_table.htm)
+
+## Hacks
+- Create your own database in the EC2 I have created (ec2-database-connect)
+    - name it with your first and last name (example:  aditya-nawandhar)
+    - using commands from the link provided make columns and rows with test data (can be anything) (example: "name" and "class" are the columns with rows being something like "Aditya" and "Junior")
+    - additional points if the data matches CPT
