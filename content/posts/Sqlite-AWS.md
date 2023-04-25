@@ -66,11 +66,21 @@ Now you have logged into the RDS as the creator who has all the rights
 ```
 CREATE DATABASE (type the database name you want- do not include the parenthesis)
 ```
+Create a table
+```
+CREATE TABLE ADI (
+  ID INT PRIMARY KEY NOT NULL,
+  NAME TEXT NOT NULL,
+  CLASS TEXT NOT NULL
+);
 
+```
+make a query to add data
 - More commands here - [Command link](https://www.tutorialspoint.com/postgresql/postgresql_create_table.htm)
 
 ## Hacks
 - Create your own database in the EC2 I have created (ec2-database-connect)
     - name it with your first and last name (example:  aditya-nawandhar)
-    - using commands from the link provided make columns and rows with test data (can be anything) (example: "name" and "class" are the columns with rows being something like "Aditya" and "Junior")
+    - Create a table using the commands on the link provided.
+    - using commands from the link provided make columns and rows with test data (can be anything) (example: "name" and "class" are the columns with rows being something like "Aditya" and "Junior"). At least 4 test rows
     - additional points if the data matches CPT
