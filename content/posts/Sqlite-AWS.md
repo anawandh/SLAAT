@@ -87,7 +87,7 @@ make a query to add data
 - hint: go to the link and find the tab that says "Insert Query" on the left side of the page
 
 ## Hacks
-- Create your own database in the EC2 I have created (ec2-database-connect)
+- Create your own database in the EC2 I have created (ec2-database-connect) [link](https://us-east-2.console.aws.amazon.com/ec2-instance-connect/ssh?region=us-east-2&connType=standard&instanceId=i-0b50ea469df9c3f8b&osUser=ec2-user&sshPort=22#/)
     - name it with your first and last name (example:  aditya-nawandhar)
     - Create a table using the commands on the link provided.
     - using commands from the link provided make columns and rows with test data (can be anything) (example: "name" and "class" are the columns with rows being something like "Aditya" and "Junior"). At least 4 test rows.
