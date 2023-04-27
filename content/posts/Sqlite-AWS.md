@@ -53,6 +53,7 @@ sudo amazon-linux-extras install postgresql14
 psql --host=database-test1.ctenoof0kzic.us-east-2.rds.amazonaws.com --port=5432 --username=postgres
 ```
 - Once you reach this step, if it asks for password - ask me!
+- The password is - Aditya123
 
 Now you have logged into the RDS as the creator who has all the rights
 
