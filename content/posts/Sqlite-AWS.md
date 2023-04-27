@@ -67,6 +67,12 @@ Now you have logged into the RDS as the creator who has all the rights
 ```
 CREATE DATABASE (type the database name you want- do not include the parenthesis)
 ```
+
+- to connect to created database
+```
+\c databse_name 
+```
+
 Create a table
 ```
 CREATE TABLE ADI (
@@ -78,6 +84,7 @@ CREATE TABLE ADI (
 ```
 make a query to add data
 - More commands here - [Command link](https://www.tutorialspoint.com/postgresql/postgresql_create_table.htm)
+- hint: go to the link and find the tab that says "Insert Query" on the left side of the page
 
 ## Hacks
 - Create your own database in the EC2 I have created (ec2-database-connect)
